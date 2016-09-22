@@ -1,14 +1,15 @@
-from node:4.4.7
+FROM node:argon
 
-RUN useradd --user-group --create-home --shell /bin/false nodejs
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-ENV HOME=/home/nodejs
-ENV NODE_ENV=production
-
-COPY package.json $HOME/app/
-RUN chown -R nodejs:nodejs $HOME/*
-USER nodejs
-WORKDIR $HOME/app
+# Install app dependencies
+COPY package.json /usr/src/app/
 RUN npm install
 
-CMD ["node", "server/app.js"]
+# Bundle app source
+COPY . /usr/src/app
+
+EXPOSE 3000
+CMD [ "npm", "start" ]
