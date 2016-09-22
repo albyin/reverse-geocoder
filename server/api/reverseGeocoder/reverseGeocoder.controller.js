@@ -1,7 +1,7 @@
 'use strict';
 
 const request = require('request-promise');
-const googleAPIKey = require('./../../config/private-key').googleAPIKey;
+const googleRevGeoAPIKey = require('./../../config/config').googleRevGeoAPIKey;
 
 module.exports = {
   reverseGeocoder: _reverseGeocoder 
@@ -12,7 +12,7 @@ function _reverseGeocoder(req, res, next) {
   //get components required to construct options
   const lat = req.body.lat,
         lng = req.body.lng,
-        key = googleAPIKey;
+        key = googleRevGeoAPIKey;
 
   //construct request options
   const options = {
