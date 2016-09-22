@@ -1,7 +1,7 @@
 'use strict';
 
 const request = require('request-promise');
-const googleRevGeoAPIKey = require('./../../config/config').googleRevGeoAPIKey;
+const googleRevGeoAPIKey = require('./../../config/config.js').googleRevGeoAPIKey;
 
 module.exports = {
   reverseGeocoder: _reverseGeocoder 
