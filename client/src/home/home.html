@@ -1,0 +1,18 @@
+<section id="home">
+
+  <h1>Hi! Use the form below to look up an address.</h1>
+  <p>You can also use Postman to post a query.</p>
+  <p>How? Make a post request to /api/reverseGeocoder with JSON body</p>
+  <p>Try {"lat":"40.740233", "lng":"-73.990001"}</p>
+  <p>Or {"lat":"40.714224", "lng":"-73.961452"}</p>
+
+  <form name="form" novalidate>
+    Latitude: <input type="text" ng-model="lat"/> <br />
+    Longitude: <input type="text" ng-model="lng" /><br />
+    <input type="submit" ng-click="lookup(lat, lng)" value="Find!" />
+  </form>
+
+  <h1 ng-if="address"> Here is the address! </h1>
+  <h1> {{ address }} </h1>
+
+</section>

@@ -1,0 +1,36 @@
+{
+  "name": "vroom-reverse-geocoder",
+  "version": "1.0.0",
+  "description": "reverse geocoding api sample",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch server server/app.js",
+    "watch": "gulp"
+  },
+  "author": "Albert Yin",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^1.0.0-beta.2",
+    "babel-preset-es2015": "^6.14.0",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "chalk": "^1.1.3",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "jquery": "^3.1.0",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.10.2",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1",
+    "run-sequence": "^1.2.2"
+  },
+  "devDependencies": {
+    "gulp-livereload": "^3.8.1"
+  }
+}
